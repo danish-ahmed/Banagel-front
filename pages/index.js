@@ -1,20 +1,27 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-
-export default function Home() {
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/commons/layout";
+import Navbar from "../components/commons/navbar";
+import NavbarMobile from "../components/commons/navbar-mobile";
+import Carousel from "../components/commons/carousel";
+import SegmentList from "../components/SegmentList";
+import SegmentProductList from "../components/SegmentProductList";
+import HowItWorks from "../components/commons/HowItWorks";
+const Home = (props) => {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
+      <header>
+        <Navbar />
+        <NavbarMobile />
+        <Carousel />
+      </header>
+      <SegmentList />
+      <SegmentProductList />
+      <HowItWorks />
     </Layout>
-  )
-}
+  );
+};
+
+export default Home;

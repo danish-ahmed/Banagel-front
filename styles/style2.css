@@ -1,0 +1,488 @@
+
+.img-work{
+    width:120px;
+    height:80px;
+}
+.img-work-p{
+    width:120px;
+    height:90px;
+}
+
+.img-work-r {
+    width: 90px;
+    height: 60px;
+}
+
+/*form*/
+.container-search-2{
+	    position: relative;
+    top: 0px!important;
+    background-color: white;
+    padding-top: 2%;
+}
+.logo-1{
+	font: var(--unnamed-font-style-normal) normal bold 31px/42px Montserrat;
+text-align: center;
+font: normal normal bold 31px/42px Montserrat;
+letter-spacing: 0.93px;
+color: #707070;
+text-shadow: 0px 3px 6px #00000029;
+}
+.register-h1{
+	font: var(--unnamed-font-style-normal) normal 600 40px/60px Open Sans;
+text-align: left;
+font: normal normal 600 40px/60px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 2em
+}
+.mt-80{
+    margin-top:80px !important;
+}
+.text-darkblue{
+    color:#1F89AB;
+}
+.home{
+	font-size: 20px;
+}
+.slider_img{
+    height:400px !important;
+}
+.animate{
+    height: auto!important;
+    width: 83%;
+    margin-left: 10%;
+    padding-top: 3%;
+}
+.animate-2{
+	    height: 207px!important;
+}
+.form-control-1{
+    display: block;
+    margin: 1% 0px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3% 1% 3% 4%;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #707070;
+}
+.form-control-2 {
+    display: block;
+    margin: 1% 0px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1% 1% 1% 2%;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #707070;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 29vh;
+}
+.form-control-3 {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1% 1% 1% 2%;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #707070;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control-4 {	
+    width: 100%;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #707070;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+        margin-left: 0%;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.brower-button{
+    background: #E4E4E4;
+    border-radius: 7px;
+    opacity: 1;
+    width: 100%;
+    padding: 7% 1% 1% 9%;
+}
+/*form*/
+/*food deliver-2*/
+.carsol{
+    color:black!important;
+}
+.carsol-buttom{
+        box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000!important;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.mt-80minus{
+        margin-top: -80px !important;
+}
+.rs-container .rs-pointer {
+    background-color: #878786!important;
+    border: -3px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    transition: all .2s linear;
+    width: 30px;
+    box-shadow: inset 0 0 1px #fff, inset 0 1px 6px #ebebeb, 1px 1px 4px rgb(0 0 0 / 10%);
+}
+.rs-container .rs-selected{
+    background-color: #eee !important;
+    border: 1px solid #eee !important;
+}
+.rs-container .rs-scale {
+    left: 0;
+    position: absolute;
+    top: 5px;
+    /* white-space: nowrap; */
+    margin: 1% -2%;
+}
+
+.rs-tooltip {
+    color: #333;
+    width: auto;
+    min-width: 3px!important;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #00969b;
+    border-radius: 3px;
+    position: absolute;
+    transform: translate(-50%,-35px);
+    left: 19px;
+    text-align: center;
+    font-size: 13px;
+    padding: 6px 10px 0;
+    margin-left: 4%!important;
+}
+.carasol-p{
+        padding: 1% 4%;
+}
+.side-menu2{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: grid;
+    text-decoration: none;
+    width: 100%;
+}
+.side-menu p{
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-weight: 600;
+        margin-top: 10px;
+    color:#1C1C1B;
+}
+.s_filter{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #878786;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top:10px;
+    padding-bottom:10px;
+    border-bottom:solid thin #C8C8C8;
+    font-size:14px !important;
+}
+.filter_title{
+    font-size:14px !important;
+    font-weight:600;
+    color:#000;
+    text-transform: uppercase;
+}
+.side-menu1{
+    border: 1px solid #C6C6C5;
+    border-radius: 5px;
+}
+
+.rating {
+      float:left;
+      margin-top: -20px;
+    }
+
+    /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+      follow these rules. Every browser that supports :checked also supports :not(), so
+      it doesn’t make the test unnecessarily selective */
+    .rating:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+        clip:rect(0,0,0,0);
+    }
+
+    .rating:not(:checked) > label {
+        float:right;
+        width:1em;
+        /* padding:0 .1em; */
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:24px;
+        /* line-height:1.2; */
+        color:#ddd;
+    }
+
+    .rating:not(:checked) > label:before {
+        content: '★ ';
+    }
+
+    .rating > input:checked ~ label {
+        color: #EA5C37;
+        
+    }
+
+    .rating:not(:checked) > label:hover,
+    .rating:not(:checked) > label:hover ~ label {
+        color: dodgerblue;
+        
+    }
+
+    .rating > input:checked + label:hover,
+    .rating > input:checked + label:hover ~ label,
+    .rating > input:checked ~ label:hover,
+    .rating > input:checked ~ label:hover ~ label,
+    .rating > label:hover ~ input:checked ~ label {
+     color: dodgerblue;        
+}
+.rating > label:active {
+   position:relative;
+   top:2px;
+}
+.logo-2{
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 29px;
+    text-align: center;
+    padding: 28% 22%;
+}
+.eight-p{
+	    text-align: center;
+    background: #74AF48 ;
+    color: white;
+    line-height: 30px;
+    width: 89px;
+height: 30px;
+}
+.REKLAM{
+	text-align: center;
+border:solid 1px;
+letter-spacing: 0px;
+color: #C29823;
+opacity: 1;
+}
+.rotate{
+	transform: rotate(87deg);
+    font-size: 42px;
+    margin-top: -57%;
+    margin-left: 24%;
+}
+.search-p{
+	    width: 13%;
+    	height: 40px;
+}
+.logo-header{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    padding: 29% 30%;
+    border-radius: 90px;
+    width: 78%;
+    position: relative;
+    top: 50px;
+    left: 6%;
+}
+.logo-header span{
+        color: #6E3FD7 !important;
+}
+.map{
+    width:100%;
+    height:50vh;
+}
+
+.place{
+    display: block;
+    width: 100%;
+    padding: .375rem 2.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.icon-img{
+    position: absolute;
+    top: 7%;
+    left: 2%;
+}
+/**************media quary start*******************/
+@media only screen and (max-width: 992px){}
+@media only screen and (max-width: 576px){}
+@media only screen and (max-width: 360px){
+	.logo-2 {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 13px;
+    text-align: center;
+    padding: 2% 12%;
+    margin-top: 5%;
+}
+.eight-p {
+    text-align: center;
+    background: #74AF48;
+    color: white;
+    line-height: 30px;
+    width: 100%;
+    height: auto;
+}
+.accord {
+    position: absolute;
+    left: 16%;
+    font-size: 12px;
+}
+.map{
+    width:100%;
+}
+} 
+/*  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops*/
+@media only screen and (max-width: 768px){}
+@media (min-width: 1281px) {}
+@media (min-width: 900px) and (max-width: 1440px){}
+@media (min-width: 1440px) and (max-width: 800px) {}
+@media (min-width: 768px) and (max-width: 1366px) {}
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+	.logo-2 {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 13px;
+    text-align: center;
+    padding: 28% 22%;
+    width: 100%;
+}
+.REKLAM {
+    text-align: center;
+    border: solid 1px;
+    letter-spacing: 0px;
+    color: #C29823;
+    opacity: 1;
+    width: 122%;
+    margin-left: 40%;
+    font-size: 12px;
+    padding: 22% 11%;
+}
+.home{
+	font-size: 9px;
+    margin-left: 17%;
+    padding: 16% 1%;
+}
+.bottal-2{
+	padding-left: 66%;
+}
+.bottal-3{
+	padding-left: 75%;
+}
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+		.logo-2 {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 13px;
+    text-align: center;
+    padding: 2% 12%;
+    margin-top: 5%;
+}
+.eight-p {
+    text-align: center;
+    background: #74AF48;
+    color: white;
+    line-height: 30px;
+    width: 100%;
+    height: auto;
+}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {}
+/**************media quary end*******************/
