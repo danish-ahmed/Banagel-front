@@ -8,7 +8,7 @@ export const getSegmentProducts = (segment) => async (dispatch) => {
     });
     console.log(segment);
     const apiResponse = await fetch(
-      t.API + "/shop-products/segment/" + segment,
+      t.API + "shop-products/segment/" + segment,
       {
         method: "GET",
         headers: new Headers({
