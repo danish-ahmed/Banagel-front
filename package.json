@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "next start -p 8080"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@react-pdf/renderer": "^2.0.16",
