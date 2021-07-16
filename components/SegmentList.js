@@ -34,8 +34,18 @@ const SegmentList = (props) => {
                         <div class="card-body">
                           <h5 class="card-title">{segment.name.en}</h5>
                           <p class="card-text">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam.
+                            {segment.description ? (
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: segment.description.en,
+                                }}
+                              ></div>
+                            ) : (
+                              <p>
+                                Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam.
+                              </p>
+                            )}
                           </p>
                           <p class="card-text">
                             <small class="text-muted">
