@@ -37,7 +37,7 @@ const SegmentList = (props) => {
                             {segment.description ? (
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: segment.description.en,
+                                  __html: segment.description,
                                 }}
                               ></div>
                             ) : (
