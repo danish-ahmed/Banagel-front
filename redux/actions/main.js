@@ -264,3 +264,73 @@ export const getSegments = () => async (dispatch) => {
     });
   }
 };
+
+export const getOffers = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: t.LOADING,
+      payload: true,
+    });
+
+    const apiResponse = await fetch(t.API + "offers/for-main-page", {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json",
+      }),
+    });
+    let result = await apiResponse.json();
+
+    dispatch({
+      type: t.GET_OFFERS,
+      payload: result,
+    });
+    dispatch({
+      type: t.LOADING,
+      payload: false,
+    });
+  } catch (error) {
+    dispatch({
+      type: t.LOADING,
+      payload: false,
+    });
+    dispatch({
+      type: t.ERROR,
+      payload: "Could not fetch data",
+    });
+  }
+};
+
+export const getShopOffers = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: t.LOADING,
+      payload: true,
+    });
+    console.log(id);
+    const apiResponse = await fetch(t.API + "offers/for-shop-page/" + id, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json",
+      }),
+    });
+    let result = await apiResponse.json();
+
+    dispatch({
+      type: t.GET_OFFERS,
+      payload: result,
+    });
+    dispatch({
+      type: t.LOADING,
+      payload: false,
+    });
+  } catch (error) {
+    dispatch({
+      type: t.LOADING,
+      payload: false,
+    });
+    dispatch({
+      type: t.ERROR,
+      payload: "Could not fetch data",
+    });
+  }
+};

@@ -1,4 +1,4 @@
-export const API = "https://banagel.herokuapp.com/api/";
+export const API = "http://localhost:3000/api/";
 export const SET_NAME = "SET_NAME";
 export const REGISTER = "REGISTER";
 export const LOADING = "LOADING";
@@ -11,6 +11,9 @@ export const DELETE_TODO = "DELETE_TODO";
 
 export const GET_SEGMENTS = "GET_SEGMENTS";
 export const GET_SEGMENT_PRODUCTS = "GET_SEGMENT_PRODUCTS";
+
+export const GET_OFFERS = "GET_OFFERS";
+export const GET_SHOP_OFFER = "GET_SHOP_OFFER";
 
 export const GET_SEGMENT_PAGE_DATA = "GET_SEGMENT_PAGE_DATA";
 export const GET_SEGMENT_PAGE_DATA_SINGLE_PRODUCT =

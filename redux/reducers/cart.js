@@ -20,10 +20,11 @@ const cart = (
         (item) => action.payload._id === item._id
       );
       if (existed_item) {
-        addedItem.quantity += 1;
-        addedItem.netPrice = addedItem.price * addedItem.quantity;
+        existed_item.quantity += 1;
+        existed_item.netPrice = addedItem.price * addedItem.quantity;
         return {
           ...state,
+          existed_item,
           total: state.total + addedItem.price,
         };
       } else {

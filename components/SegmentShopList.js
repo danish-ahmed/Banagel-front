@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../redux/actions/cart";
 import Link from "next/dist/client/link";
+import Image from "next/image";
 
 const SegmentShopList = ({ shops, addToCart }) => {
   const handleClick = (product) => {
@@ -12,13 +13,19 @@ const SegmentShopList = ({ shops, addToCart }) => {
       {shops &&
         shops.map((shop) => (
           <>
-            <Link href={"/shops/[id]"} as={`/shops/${shop.shop._id}`}>
-              <div className="row" key={shop.shop._id}>
+            <Link href={"/shops/[id]"} as={`/shops/${shop._id}`}>
+              <div className="row" key={shop._id}>
                 <div className="col-md-2">
-                  <img
-                    src={shop.shop.filename}
-                    className="img-thumbnail custom_size"
-                    height="100"
+                  <Image
+                    src={
+                      shop.filename
+                        ? shop.filename
+                        : "http://localhost:5000/public/uploads/patner4.png"
+                    }
+                    alt={shop.shopname.en}
+                    layout="responsive"
+                    width={300}
+                    height={300}
                   />
                 </div>
                 <div className="col-md-2">
@@ -26,11 +33,11 @@ const SegmentShopList = ({ shops, addToCart }) => {
                   <img src="/images/bottal-img-1.png" />
                 </div>
                 <div className="col-md-2">
-                  <h5 className="REKLAM">{shop.shop.shopname.en}</h5>
+                  <h5 className="REKLAM">{shop.shopname.en}</h5>
                   <img src="/images/bottal-img-2.png" className="bottal-2" />
                 </div>
                 <div className="col-md-3">
-                  <h4 className="home">{shop.shop.shopname.en}</h4>
+                  <h4 className="home">{shop.shopname.en}</h4>
                   <img src="/images/bottal-img-3.png" className="bottal-3" />
                 </div>
                 <div className="col-md-2">

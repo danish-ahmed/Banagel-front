@@ -16,7 +16,10 @@ export default function ShopProducts({ data }) {
           products={data && data.productList}
           subcategories={data && data.subcategories}
         />
-        <ShopProductsList products={data && data.products} />
+        <ShopProductsList
+          shop={data && data.shop}
+          products={data && data.products}
+        />
       </div>
     </div>
   );

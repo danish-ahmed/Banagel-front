@@ -6,6 +6,7 @@ import Carousel from "../components/commons/carousel";
 import SegmentList from "../components/SegmentList";
 import SegmentProductList from "../components/SegmentProductList";
 import HowItWorks from "../components/commons/HowItWorks";
+import OfferList from "../components/OfferList";
 const Home = (props) => {
   return (
     <Layout home>
@@ -18,6 +19,7 @@ const Home = (props) => {
         <Carousel />
       </header>
       <SegmentList />
+      <OfferList />
       <SegmentProductList />
       <HowItWorks />
     </Layout>

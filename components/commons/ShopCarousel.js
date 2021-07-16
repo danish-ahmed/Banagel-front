@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function ShopCarousel({ shop }) {
   return (
@@ -8,11 +9,25 @@ export default function ShopCarousel({ shop }) {
       data-bs-ride="carousel"
     >
       <div class="carousel-inner carousel-inner-img">
-        <div class="carousel-item active">
-          <img
-            src="/images/photo-1513104890138-7c749659a591.jpg"
-            class="d-block w-100"
-            alt="..."
+        <div
+          class="carousel-item active"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "700px",
+            maxHeight: "700px",
+            maxWidth: "100%",
+          }}
+        >
+          <Image
+            src={
+              (shop && shop.landingImage) ||
+              "/images/photo-1513104890138-7c749659a591.jpg"
+            }
+            alt={shop && shop.shopname.en}
+            className="d-block w-100"
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       </div>

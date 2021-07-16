@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { getSegmentProducts } from "../redux/actions/segmentProducts";
 import { addToCart } from "../redux/actions/cart";
+import Image from "next/image";
 
 export const SegmentProducts = (props) => {
   const { segmentProducts, segment, addToCart } = props;
@@ -19,11 +20,18 @@ export const SegmentProducts = (props) => {
           <div class="col-md-2 col-6">
             <a href="#" class="alink-categories">
               <div class="card product-card">
-                <img
+                <Image
+                  src={product && product.image}
+                  alt={product && product.name.en}
+                  layout="responsive"
+                  width={300}
+                  height={300}
+                />
+                {/* <img
                   src="images/photo-1548077446-8ee8a91f298d.jpg"
                   class="card-img-top product-card-img-top"
                   alt="..."
-                />
+                /> */}
                 <div class="card-body product-card-body">
                   <h5 class="card-title product-card-title">
                     {product.name.en}
@@ -34,8 +42,13 @@ export const SegmentProducts = (props) => {
                   >
                     <i class="fas fa-cart-plus"></i>
                   </a>
-                  <p class="card-text product-card-text-1">${product.price}</p>
-                  <p class="card-text product-card-text-2">1.5 Litre</p>
+                  <p class="card-text product-card-text-1">
+                    {product.actualPrice !== product.price && (
+                      <s>{product.actualPrice}€ </s>
+                    )}
+                    {product.price} €
+                  </p>
+                  <p class="card-text product-card-text-2">{product.unit}</p>
                 </div>
               </div>
             </a>

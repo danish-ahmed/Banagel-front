@@ -75,7 +75,9 @@ const SegmentPageFilters = (props) => {
             </p>
           ))}
       </div> */}
-      <button onClick={handleClick}>Filter</button>
+      <button className="btn btn-primary" onClick={handleClick}>
+        Filter
+      </button>
     </div>
   );
 };

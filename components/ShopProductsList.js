@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../redux/actions/cart";
-
-const ShopProductsList = ({ products, addToCart }) => {
+import ShopOffer from "../components/ShopOffer";
+const ShopProductsList = ({ shop, products, addToCart }) => {
   const [loading, setSpiner] = React.useState(false);
   const handleClick = async (product) => {
     setSpiner(true);
@@ -15,7 +15,9 @@ const ShopProductsList = ({ products, addToCart }) => {
   };
   return (
     <div className="col-md-10">
-      <h2 className="mt-3 mb-3">Favourite</h2>
+      <ShopOffer shop={shop} />
+      <h2 className="mt-3 mb-3">Products</h2>
+
       <div
         className="favcara"
         data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'
@@ -24,17 +26,17 @@ const ShopProductsList = ({ products, addToCart }) => {
           {products &&
             products.length > 0 &&
             products.map((product) => (
-              <div className="col-md-4">
+              <div className="col-md-4" style={{ marginBottom: "10px" }}>
                 <div
                   className="card fav-carousel-card"
                   style={{ width: "18rem" }}
                 >
                   <img
-                    width="200"
-                    height="300"
+                    width="180"
+                    height="280"
                     src={product.image}
                     className="card-img-top"
-                    alt="..."
+                    alt={product.name.en}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{product.name.en}</h5>

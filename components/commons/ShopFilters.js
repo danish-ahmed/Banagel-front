@@ -100,7 +100,9 @@ const ShopFilters = ({ subcategories, products, getShopPageData, shop }) => {
           &nbsp;&nbsp;Turkey
         </p>
       </div> */}
-      <button onClick={handleClick}>Filter</button>
+      <button className="btn btn-primary" onClick={handleClick}>
+        Filter
+      </button>
     </div>
   );
 };
