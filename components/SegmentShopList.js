@@ -20,7 +20,7 @@ const SegmentShopList = ({ shops, addToCart }) => {
                     src={
                       shop.filename
                         ? shop.filename
-                        : "http://localhost:5000/public/uploads/patner4.png"
+                        : "http://banagel.herokuapp.com/public/uploads/patner4.png"
                     }
                     alt={shop.shopname.en}
                     layout="responsive"
