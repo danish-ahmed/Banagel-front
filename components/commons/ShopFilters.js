@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { getShopPageData } from "../../redux/actions/shopPageData";
 
-const ShopFilters = ({ subcategories, products, getShopPageData, shop }) => {
+const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
   const [checkedFilters, setCheckedFilters] = React.useState({
     subcategory: [],
     // shop: [],
@@ -47,18 +47,29 @@ const ShopFilters = ({ subcategories, products, getShopPageData, shop }) => {
       </div>
 
       <div className="side-menu">
-        <p className="filter_title">ITEMS</p>
-        {subcategories &&
-          subcategories.map((p) => (
-            <p>
-              <input
-                type="checkbox"
-                name="subcategory"
-                value={p._id}
-                onChange={handleChange("subcategory")}
-              />
-              &nbsp;&nbsp;{p.name.en}
-            </p>
+        <p className="filter_title">CATEGORIES</p>
+        {categories &&
+          categories.length > 0 &&
+          categories.map((cat) => (
+            <>
+              <p>{cat.name.en}</p>
+              {cat.subcategories.map(
+                (subcat) =>
+                  cat._id === subcat.category._id && (
+                    <>
+                      <p key={subcat._id}>
+                        <input
+                          type="checkbox"
+                          name="subcategory"
+                          value={subcat._id}
+                          onChange={handleChange("subcategory")}
+                        />
+                        &nbsp;&nbsp;{subcat.name.en}
+                      </p>
+                    </>
+                  )
+              )}
+            </>
           ))}
       </div>
 

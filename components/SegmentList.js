@@ -26,7 +26,7 @@ const SegmentList = (props) => {
                       <div class="col-md-5">
                         <img
                           class="w-100"
-                          src={`/images/cat-${i + 1}.jpg`}
+                          src={`/images/${segment.name.en}.jpg`}
                           alt="..."
                         />
                       </div>

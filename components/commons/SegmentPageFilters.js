@@ -3,15 +3,16 @@ import { connect } from "react-redux";
 import { getSegmentPageData } from "../../redux/actions/segmentPageData";
 
 const SegmentPageFilters = (props) => {
-  const { subcategories, products } = props;
+  const { subcategories, categories, products } = props;
   const [checkedFilters, setCheckedFilters] = React.useState({
     subcategory: [],
-    // shop: [],
     product: [],
   });
+  // const [categories, setCategories] = React.useState([]);
   const handleClick = () => {
     props.getSegmentPageData(props.segment, checkedFilters);
   };
+
   const handleChange = (prop) => (e) => {
     if (e.target.checked === true) {
       setCheckedFilters({
@@ -47,17 +48,28 @@ const SegmentPageFilters = (props) => {
       </div>
       <div className="side-menu">
         <p className="filter_title">Categories</p>
-        {subcategories &&
-          subcategories.map((cat) => (
-            <p key={cat._id}>
-              <input
-                type="checkbox"
-                name="subcategory"
-                value={cat._id}
-                onChange={handleChange("subcategory")}
-              />
-              &nbsp;&nbsp;{cat.name.en}
-            </p>
+        {categories &&
+          categories.length > 0 &&
+          categories.map((cat) => (
+            <>
+              <p>{cat.name.en}</p>
+              {cat.subcategories.map(
+                (subcat) =>
+                  cat._id === subcat.category._id && (
+                    <>
+                      <p key={subcat._id}>
+                        <input
+                          type="checkbox"
+                          name="subcategory"
+                          value={subcat._id}
+                          onChange={handleChange("subcategory")}
+                        />
+                        &nbsp;&nbsp;{subcat.name.en}
+                      </p>
+                    </>
+                  )
+              )}
+            </>
           ))}
       </div>
       {/* <div className="side-menu">

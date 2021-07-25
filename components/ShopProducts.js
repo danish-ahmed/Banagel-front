@@ -14,7 +14,7 @@ export default function ShopProducts({ data }) {
         <ShopFilters
           shop={data && data.shop}
           products={data && data.productList}
-          subcategories={data && data.subcategories}
+          categories={data && data.categories}
         />
         <ShopProductsList
           shop={data && data.shop}

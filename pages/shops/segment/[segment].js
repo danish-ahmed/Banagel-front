@@ -30,7 +30,7 @@ const Segment = (props) => {
         <Navbar />
         <NavbarMobile />
         <SegmentNavbar />
-        <SegmentPageCarousel />
+        <SegmentPageCarousel offers={data && data.offers} />
       </header>
       <section className="mt-80">
         <div className="container">
@@ -39,6 +39,7 @@ const Segment = (props) => {
               shops={data && data.shops}
               products={data && data.data}
               subcategories={data && data.subcategories}
+              categories={data && data.categories}
               segment={segment}
             />
             <SegmentShopList shops={data && data.shops} />
