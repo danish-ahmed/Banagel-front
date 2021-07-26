@@ -28,9 +28,15 @@ const Order = ({ invoice }) => {
                       <br /> Waldschulstr. 30,
                       <br /> 75180 Pforzheim
                     </p>
-                    <p>{invoice.customer.name}</p>
+                    <p>
+                      {invoice.customer.name.charAt(0).toUpperCase() +
+                        invoice.customer.name.slice(1)}
+                    </p>
                     {/* <p>{invoice.customer._id}</p> */}
-                    <p>{invoice.customer.address}</p>
+                    <p>
+                      {invoice.customer.address.charAt(0).toUpperCase() +
+                        invoice.customer.address.slice(1)}
+                    </p>
                   </div>
                   <div className="col-md-2"></div>
                   <div className="col-md-5">
@@ -46,11 +52,11 @@ const Order = ({ invoice }) => {
                       </tr>
                       <tr>
                         <th>Rechnungsdatum</th>
-                        <td>{invoice.publishDate}</td>
+                        <td>{invoice.publishDate.slice(0, 10)}</td>
                       </tr>
                       <tr>
                         <th>Lieferdatum</th>
-                        <td>{invoice.publishDate}</td>
+                        <td>{invoice.publishDate.slice(0, 10)}</td>
                       </tr>
                       <tr>
                         <th>Lieferart</th>
@@ -60,7 +66,10 @@ const Order = ({ invoice }) => {
                   </div>
                   <div className="row">
                     <div className="col-md-12">
-                      Sehr geehrter {invoice.customer.name.en}, <br />
+                      Sehr geehrter{" "}
+                      {invoice.customer.name.charAt(0).toUpperCase() +
+                        invoice.customer.name.slice(1)}
+                      , <br />
                       Sie haben heute mit Ihrem Einkauf bei unserem Onlineshop
                       www.banagel.de eine sehr gute Wahl getroffen. Wir bedanken
                       uns für Ihren Besuch und begrüßen Ihren nächten Besuch auf
@@ -172,7 +181,7 @@ const Order = ({ invoice }) => {
                             <td></td>
                             <td></td>
                             <td>
-                              <b>Netto-Summe</b>
+                              <b>Gesamtsumme</b>
                             </td>
                             <td>
                               <b>{invoice.endTotal.toFixed(2)} € </b>
@@ -180,6 +189,24 @@ const Order = ({ invoice }) => {
                           </tr>
                         )}
                       </tbody>
+                    </table>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tr>
+                        <td>Banagel GmbH, Waldschulstr. 30, 75180 Pforzheim</td>
+                        <td>
+                          Tel: +49 (151) 123466 service@banagel.de
+                          www.banagel.de
+                        </td>
+                        <td>
+                          Musterbank DE 85 1234 5678 9012 3456 78 BIC: ABCDEFGHI
+                        </td>
+                        <td>
+                          USt. ID: 08151234 Gerichtsstand: Pforzheim
+                          Handelsregister: 12345678
+                        </td>
+                      </tr>
                     </table>
                   </div>
                 </div>

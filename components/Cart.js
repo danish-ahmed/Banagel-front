@@ -149,7 +149,7 @@ const Cart = ({ cart, addQuantity, subQuantity, addComment }) => {
                       <td></td>
                       <td></td>
                       <td>
-                        <b>Netto-Summe</b>
+                        <b>Gesamtsumme</b>
                       </td>
                       <td>
                         <b>{cart.endTotal.toFixed(2)} € </b>
