@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
 export default function SegmentPageCarousel({ offers }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en-US" ? "en" : "de";
   return (
     <div
       id="carouselExampleDark"
@@ -28,7 +31,7 @@ export default function SegmentPageCarousel({ offers }) {
             >
               <Image
                 src={offer && offer.image}
-                alt={offer && offer.name.en}
+                alt={offer && offer.name[t]}
                 // alt={shop && shop.shopname.en}
                 className="d-block w-100"
                 layout="fill"
@@ -36,7 +39,7 @@ export default function SegmentPageCarousel({ offers }) {
               />
               <Link href={"/offers/[id]"} as={`/offers/${offer._id}`}>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>{offer.name}</h5>
+                  <h5>{offer.name[t]}</h5>
                   <p class="card-text">
                     <div
                       dangerouslySetInnerHTML={{

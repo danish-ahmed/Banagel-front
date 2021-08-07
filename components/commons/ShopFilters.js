@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getShopPageData } from "../../redux/actions/shopPageData";
-
+import { useRouter } from "next/router";
 const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en-US" ? "en" : "de";
   const [checkedFilters, setCheckedFilters] = React.useState({
     subcategory: [],
     // shop: [],
@@ -12,7 +15,7 @@ const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
     getShopPageData(shop._id, checkedFilters);
   };
   const handleChange = () => (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
     if (e.target.checked === true) {
       setCheckedFilters({
         ...checkedFilters,
@@ -41,7 +44,7 @@ const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
                 name="product"
                 onChange={handleChange("product")}
               />
-              &nbsp;&nbsp;{p.name.en}
+              &nbsp;&nbsp;{p.name[t]}
             </p>
           ))}
       </div>
@@ -52,7 +55,7 @@ const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
           categories.length > 0 &&
           categories.map((cat) => (
             <>
-              <p>{cat.name.en}</p>
+              <p>{cat.name[t]}</p>
               {cat.subcategories.map(
                 (subcat) =>
                   cat._id === subcat.category._id && (
@@ -64,7 +67,7 @@ const ShopFilters = ({ categories, products, getShopPageData, shop }) => {
                           value={subcat._id}
                           onChange={handleChange("subcategory")}
                         />
-                        &nbsp;&nbsp;{subcat.name.en}
+                        &nbsp;&nbsp;{subcat.name[t]}
                       </p>
                     </>
                   )

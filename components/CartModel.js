@@ -86,7 +86,7 @@ const CartModel = ({ cart, addQuantity, subQuantity }) => {
                               -
                             </button>
                           </td>
-                          <td>{product.price}</td>
+                          <td>{product.price + " " + product.currency}</td>
                         </tr>
                       ))}
                   </tbody>

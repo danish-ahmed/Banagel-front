@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 export default function ShopCarousel({ shop }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en-US" ? "en" : "de";
   return (
     <div
       id="carouselExampleSlidesOnly"
@@ -24,7 +27,7 @@ export default function ShopCarousel({ shop }) {
               (shop && shop.landingImage) ||
               "/images/photo-1513104890138-7c749659a591.jpg"
             }
-            alt={shop && shop.shopname.en}
+            alt={shop && shop.shopname[t]}
             className="d-block w-100"
             layout="fill"
             objectFit="cover"
@@ -41,27 +44,27 @@ export default function ShopCarousel({ shop }) {
             />
           </div>
           <div class="col-md-7">
-            <h2 class="text-white">{shop && shop.shopname.en}</h2>
+            <h2 class="text-white">{shop && shop.shopname[t]}</h2>
             <div class="row mt-5 row-cols-2">
               <div class="col-md-2">
-                <div class="card landing-card-header text-center text-white light-green">
+                {/* <div class="card landing-card-header text-center text-white light-green">
                   <div class="card-body">Users</div>
                   <p>9.0</p>
-                </div>
+                </div> */}
               </div>
               <div class="col-md-2">
-                <div class="card landing-card-header text-center text-white light-green">
+                {/* <div class="card landing-card-header text-center text-white light-green">
                   <div class="card-body">Users</div>
                   <p>9.0</p>
-                </div>
+                </div> */}
               </div>
               <div class="col-md-2">
-                <div class="card landing-card-header text-center text-white light-green">
+                {/* <div class="card landing-card-header text-center text-white light-green">
                   <div class="card-body">Users</div>
                   <p>9.0</p>
-                </div>
+                </div> */}
               </div>
-              <div class="col-md-2">
+              {/* <div class="col-md-2">
                 <div class="card landing-card-header text-white">
                   <div class="card-body">
                     <i class="fas fa-coins"></i>
@@ -82,7 +85,7 @@ export default function ShopCarousel({ shop }) {
                     20 - 30 dk
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

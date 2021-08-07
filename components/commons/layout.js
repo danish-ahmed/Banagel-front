@@ -72,6 +72,162 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <h2 class="footer-headings">Download Our App</h2>
+              <div class="footer-btn-links">
+                <ul>
+                  <li class="footer-btn-li">
+                    <a href="#">
+                      <img class="footer-btn-img" src="images/appstore.jpg" />
+                    </a>
+                  </li>
+                  <li class="footer-btn-li">
+                    <a href="#">
+                      <img class="footer-btn-img" src="images/googleplay.jpg" />
+                    </a>
+                  </li>
+                  <li class="footer-btn-li">
+                    <a href="#">
+                      <img class="footer-btn-img" src="images/appgallery.jpg" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-headings">Menu</h2>
+              <div class="links">
+                <ul class="footer-list-links">
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Delivery to door or pickup
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Best Price
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-headings">Need help?</h2>
+              <div class="links">
+                <ul class="footer-list-links">
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      FAQ
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Protecting Private Information
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Cookie Policy
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-headings">Categories</h2>
+              <div class="links">
+                <ul class="footer-list-links">
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Vegetables & Fruits
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Bread & Co
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Drinks
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Meat & Fish
+                    </a>
+                  </li>
+                  <li class="footer-links-li">
+                    <a href="#" class="footer-links-anchor">
+                      Breakfast
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <p class="p-credits">
+                  © Copyright 2021. All Rights Reserved{" "}
+                  <i class="fas fa-circle"></i>{" "}
+                  <a href="#">Bilgi Toplumu Hizmetleri</a>{" "}
+                </p>
+              </div>
+              <div class="col-md-6"></div>
+              <div class="col-md-3 links-last-col">
+                <div class="credits-links" align="right">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-light border">
+                        <img src="images/globe.jpg" class="imgglobe" /> English
+                        (EN)
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"

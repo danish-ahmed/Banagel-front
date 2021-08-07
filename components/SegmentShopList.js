@@ -3,8 +3,11 @@ import { connect } from "react-redux";
 import { addToCart } from "../redux/actions/cart";
 import Link from "next/dist/client/link";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 const SegmentShopList = ({ shops, addToCart }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en-US" ? "en" : "de";
   const handleClick = (product) => {
     addToCart(product);
   };
@@ -33,11 +36,11 @@ const SegmentShopList = ({ shops, addToCart }) => {
                   <img src="/images/bottal-img-1.png" />
                 </div>
                 <div className="col-md-2">
-                  <h5 className="REKLAM">{shop.shopname.en}</h5>
+                  <h5 className="REKLAM">{shop.shopname[t]}</h5>
                   <img src="/images/bottal-img-2.png" className="bottal-2" />
                 </div>
                 <div className="col-md-3">
-                  <h4 className="home">{shop.shopname.en}</h4>
+                  <h4 className="home">{shop.shopname[t]}</h4>
                   <img src="/images/bottal-img-3.png" className="bottal-3" />
                 </div>
                 <div className="col-md-2">
