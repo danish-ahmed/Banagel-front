@@ -1,4 +1,4 @@
-export const API = "http://banagel-front.herokuapp.com/api/";
+export const API = "https://banagel.herokuapp.com/api/";
 export const SET_NAME = "SET_NAME";
 export const REGISTER = "REGISTER";
 export const LOADING = "LOADING";
